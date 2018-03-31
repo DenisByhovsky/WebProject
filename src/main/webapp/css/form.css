@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab|Suez+One');
+
+
+
+ html{
+    
+
+}
+
+
+body{
+   
+    background-image: url("/img/send1.jpg");
+     background-repeat: no-repeat;
+    height: 100%;
+}
+
+form{
+        position: fixed;
+    margin-top: 17%;
+    margin-left: 40%;
+    color:white;
+    background:  #1a252f;
+    border-radius: 10px;
+    padding: 20px;
+    width:335px;
+    opacity: 0.9;
+ }
+
+form:hover{
+
+    opacity: 1;
+}
+
+.p{
+    width:400px;
+}
+
+.title{
+    padding: 5px;
+    font-size: 1.3em;
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    color:black;
+
+}

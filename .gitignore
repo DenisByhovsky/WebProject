@@ -1,0 +1,21 @@
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# virtual machine crash logs
+/hs_err_pid*
+
+/target/*
+/logs/*
+/lib/*
+
+/Totalizator1.iml
+
+/Totalizator/src/main/java/com/epam/totalizator/Main.java
+
+Main.java

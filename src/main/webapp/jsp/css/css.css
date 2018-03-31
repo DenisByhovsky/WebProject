@@ -1,0 +1,174 @@
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+
+body {
+    height: 100%;
+    color: silver;
+    margin: 0;
+    font-family: 'Roboto Condensed',sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    background-color: #f3f3f3;
+
+   
+	
+}
+
+body {
+    display: block;
+  
+}
+
+
+
+
+
+* {
+    outline: 0;
+}
+
+
+
+
+
+
+ul{
+    list-style-type: none;
+    text-indent: 0px;
+    padding-left: 0px;
+}
+
+
+
+.login_form{
+    margin:40px auto;
+	width:60%;
+    
+	/*box-shadow: 0 0 60px rgb(255, 140, 0);
+	 border-radius: 20px;*/
+	padding: 0px 0px 15px 0px;
+	background: #212121;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+     
+}
+
+
+input[type="checkbox" i] {
+    margin: 3px 3px 3px 4px;
+}
+
+input[type="radio" i], input[type="checkbox" i] {
+    background-color: initial;
+    cursor: default;
+    margin: 3px 0.5ex;
+    padding: initial;
+    border: initial;
+}
+.login_form p{
+    cursor: default;
+    font-weight: bold;
+    text-align: center;
+}
+
+h2{
+    color: silver;
+    text-align: center;
+    font-family: 'Roboto Condensed',sans-serif;
+
+}
+
+
+#submit{
+    text-align: center;
+}
+
+.but_new_big {
+    font-weight: bold;
+    display: inline-block;
+    padding: 12px 40px;
+    background-color: orange;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+}
+
+
+
+h3{
+    margin: 20px auto;
+    text-align: left;
+    font-weight: bold;
+    color: #202020;
+
+    font-family: 'Roboto Condensed',sans-serif;
+    text-shadow: none;
+    border-top: 0;
+    
+    font-size: 18px;
+    background-color: orange;
+    padding: 20px;
+}
+
+
+.F_Lcol{
+    width: 180px;
+    font-weight: bold;
+}
+
+.F_Req{
+    width: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: red;
+}
+
+
+.F_Table{
+    border: 0;
+    width: 70%;
+    margin-left: 5px;
+    vertical-align: middle;
+	margin:0 auto;
+}
+table {
+    display: table;
+    border-collapse: separate;
+    border-spacing: 2px;
+    border-color: grey;
+}
+
+
+input, textarea, select, button {
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+     border-radius: 5px;
+}
+
+
+input {
+    -webkit-appearance: textfield;
+    background-color: white;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    padding: 1px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: initial;
+    border-image: initial;
+}
+
+.F_Table tr td .F_LCOL{
+    padding-right: 30px;
+}

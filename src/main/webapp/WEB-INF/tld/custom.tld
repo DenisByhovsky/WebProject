@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib version="2.0" xmlns="http://java.sun.com/xml/ns/j2ee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee">
+    <tlib-version>1.0</tlib-version>
+    <short-name>ctg</short-name>
+    <uri>customtags</uri>
+    <tag>
+        <name>info-date</name>
+        <tag-class>com.epam.totalizator.tag.CustomDateTag</tag-class>
+        <body-content>empty</body-content>
+    </tag>
+
+    <tag>
+        <name>info-name</name>
+        <tag-class>com.epam.totalizator.tag.CustomNameTag</tag-class>
+        <body-content>empty</body-content>
+    </tag>
+</taglib>

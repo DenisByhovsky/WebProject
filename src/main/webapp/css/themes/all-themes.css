@@ -1,0 +1,137 @@
+
+.theme-orange .navbar {
+  background-color: #f9ae00; }
+
+.theme-orange .navbar-brand {
+  color: #fff; }
+  .theme-orange .navbar-brand:hover {
+    color: #fff; }
+  .theme-orange .navbar-brand:active {
+    color: #fff; }
+  .theme-orange .navbar-brand:focus {
+    color: #fff; }
+
+.theme-orange .nav > li > a {
+  color: #fff; }
+  .theme-orange .nav > li > a:hover {
+    background-color: transparent; }
+  .theme-orange .nav > li > a:focus {
+    background-color: transparent; }
+
+.theme-orange .nav .open > a {
+  background-color: transparent; }
+  .theme-orange .nav .open > a:hover {
+    background-color: transparent; }
+  .theme-orange .nav .open > a:focus {
+    background-color: transparent; }
+
+.theme-orange .bars {
+  color: #fff; }
+
+.theme-orange .sidebar .menu .list li.active {
+  background-color: transparent; }
+  .theme-orange .sidebar .menu .list li.active > :first-child i, .theme-orange .sidebar .menu .list li.active > :first-child span {
+    color: #FF9800; }
+
+.theme-orange .sidebar .menu .list .toggled {
+  background-color: transparent; }
+
+.theme-orange .sidebar .menu .list .ml-menu {
+  background-color: transparent; }
+
+.theme-orange .sidebar .legal {
+  background-color: #fff; }
+  .theme-orange .sidebar .legal .copyright a {
+    color: #FF9800 !important; }
+
+.theme-deep-orange .navbar {
+  background-color: #FF5722; }
+
+.theme-deep-orange .navbar-brand {
+  color: #fff; }
+  .theme-deep-orange .navbar-brand:hover {
+    color: #fff; }
+  .theme-deep-orange .navbar-brand:active {
+    color: #fff; }
+  .theme-deep-orange .navbar-brand:focus {
+    color: #fff; }
+
+.theme-deep-orange .nav > li > a {
+  color: #fff; }
+  .theme-deep-orange .nav > li > a:hover {
+    background-color: transparent; }
+  .theme-deep-orange .nav > li > a:focus {
+    background-color: transparent; }
+
+.theme-deep-orange .nav .open > a {
+  background-color: transparent; }
+  .theme-deep-orange .nav .open > a:hover {
+    background-color: transparent; }
+  .theme-deep-orange .nav .open > a:focus {
+    background-color: transparent; }
+
+.theme-deep-orange .bars {
+  color: #fff; }
+
+.theme-deep-orange .sidebar .menu .list li.active {
+  background-color: transparent; }
+  .theme-deep-orange .sidebar .menu .list li.active > :first-child i, .theme-deep-orange .sidebar .menu .list li.active > :first-child span {
+    color: #FF5722; }
+
+.theme-deep-orange .sidebar .menu .list .toggled {
+  background-color: transparent; }
+
+.theme-deep-orange .sidebar .menu .list .ml-menu {
+  background-color: transparent; }
+
+.theme-deep-orange .sidebar .legal {
+  background-color: #fff; }
+  .theme-deep-orange .sidebar .legal .copyright a {
+    color: #FF5722 !important; }
+
+
+.theme-black .navbar {
+  background-color: #212121; }
+
+.theme-black .navbar-brand {
+  color: #fff; }
+  .theme-black .navbar-brand:hover {
+    color: #fff; }
+  .theme-black .navbar-brand:active {
+    color: #fff; }
+  .theme-black .navbar-brand:focus {
+    color: #fff; }
+
+.theme-black .nav > li > a {
+  color: #fff; }
+  .theme-black .nav > li > a:hover {
+    background-color: transparent; }
+  .theme-black .nav > li > a:focus {
+    background-color: transparent; }
+
+.theme-black .nav .open > a {
+  background-color: transparent; }
+  .theme-black .nav .open > a:hover {
+    background-color: transparent; }
+  .theme-black .nav .open > a:focus {
+    background-color: transparent; }
+
+.theme-black .bars {
+  color: #fff; }
+
+.theme-black .sidebar .menu .list li.active {
+  background-color: transparent; }
+  .theme-black .sidebar .menu .list li.active > :first-child i, .theme-black .sidebar .menu .list li.active > :first-child span {
+    color: #000; }
+
+.theme-black .sidebar .menu .list .toggled {
+  background-color: transparent; }
+
+.theme-black .sidebar .menu .list .ml-menu {
+  background-color: transparent; }
+
+.theme-black .sidebar .legal {
+  background-color: #fff; }
+  .theme-black .sidebar .legal .copyright a {
+    color: #000 !important; }
+

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<setup xmlns="http://databene.org/benerator/0.9.7"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://databene.org/benerator/0.9.8 http://databene.org/benerator-0.9.8.xsd"
+       defaultEncoding="UTF-8"
+       defaultDataset="RU"
+       defaultLocale="ru"
+       defaultLineSeparator="\r\n"
+       defaultSeparator=";">
+
+    <comment>Including environment properties</comment>
+    <include uri="configuration/env.properties"/>
+    <include uri="configuration/benerator.properties"/>
+
+    <import platforms="db,csv" />
+    <import defaults="true" domains="organization,address,person,net" />
+    <import class="org.databene.benerator.distribution.function.*,
+	org.databene.benerator.primitive.*,org.databene.platform.db.*"/>
+    <import class="org.databene.commons.TimeUtil"/>
+
+    <database id="db"
+              url="{ftl:${DB_DRIVER}:${DB_CONNECTION}://${DB_HOST}:${DB_PORT}/${DB_DATABASE}?characterEncoding=UTF-8}"
+              driver="com.mysql.jdbc.Driver"
+              user="{ftl:${DB_USERNAME}}"
+              password="{ftl:${DB_PASSWORD}}"
+              catalog="{ftl:${DB_DATABASE}}"/>
+
+ <!-- <comment>Dropping and creating database</comment>
+    <execute uri="benerator/create_tables.sql" target="db"/>
+-->
+    <bean id="idGen" spec="new IncrementGenerator(14567)"/>
+    <bean id="idGen1" spec="new IncrementGenerator(14567)"/>
+    <bean id="idGen2" spec="new IncrementGenerator(14567)"/>
+    <bean id="idGen3" spec="new IncrementGenerator(14567)"/>
+    <bean id="idGen4" spec="new IncrementGenerator(14567)"/>
+    <bean id="idGen5" spec="new IncrementGenerator(14567)"/>
+    <bean id="idGen6" spec="new IncrementGenerator(123)"/>
+    <bean id="idGen7" spec="new IncrementGenerator(123)"/>
+    <bean id="idGen8" spec="new IncrementGenerator(14567)"/>
+
+    <bean id="datetime_gen" class="DateTimeGenerator">
+        <property name="minDate" value="2017-05-01"/>
+        <property name="maxDate" value="2018-05-25"/>
+        <property name="dateDistribution" value="random"/>
+        <property name="minTime" value="00:00:00"/>
+        <property name="maxTime" value="23:59:00"/>
+        <property name="timeDistribution" value="random"/>
+    </bean>
+
+
+    <!--
+    <comment>Generate Admin</comment>
+    <generate type="accounts"  count="1"   consumer="db">
+        <id name="login" type="string"   values="'Pariroom_admin22'"/>
+        <attribute name="password" type="string"  script="{ftl:${DEFAULT_USER_PASSWORD}}"/>
+        <attribute name="first_name" type="string"  values="'Denis'"/>
+        <attribute name="last_name" type="string"  values="'Byhovsky'"/>
+        <attribute name="email" type="string"  values="'admin@gmail.com'"/>
+        <attribute name="role" type="string"  values="'ADMIN'"/>
+        <attribute name="birthday" type="string" values="'1994-07-21'"/>
+        <attribute name="create_date" type="string" values="'2017-07-21'"/>
+    </generate>
+    -->
+
+
+       <!--   <comment>Generate Account</comment>
+       <generate type="accounts"   count="1" consumer="db">
+           <variable name="user" unique="true" generator="PersonGenerator" dataset="US" locale="en"/>
+
+           <attribute name="login" type="int" unique="true" generator="idGen"/>
+           <attribute name="password" type="string"  script="{ftl:${DEFAULT_ADMIN_PASSWORD}}"/>
+           <attribute name="first_name" type="string" unique="true" script="{ftl:${user.givenName} }"/>
+           <attribute name="last_name" type="string" unique="true" script="{ftl: ${user.familyName}}"/>
+           <attribute name="email" type="string" unique="true" script="user.email"/>
+           <attribute name="role" type="string"  values="'CLIENT','BOOKMAKER'"/>
+           <attribute name="birthday" type="string" values="'1994-07-21'"/>
+           <attribute name="create_date" type="string" values="'2017-07-21'"/>
+           <attribute name="doc-numb" type="string" values="'234242'"/>
+           <attribute name="phone" type="string" values="'3453535'"/>
+           <attribute name="doc_type" type="string" values="'passport'"/>
+       </generate>
+-->
+
+    <!-- Good-->
+    <!--
+<comment>Generating coefficients</comment>
+    <generate type="coefficients" count="10" consumer="db">
+        <id name="id" generator="idGen"/>
+        <attribute name="win_first" type="big_decimal" min="1.2" max="10.00" granularity="0.03"
+                   distribution="random"/>
+        <attribute name="win_second" type="big_decimal"  min="1.2" max="10.00" granularity="0.03"
+                   distribution="random"/>
+        <attribute name="nobody" type="big_decimal" min="1.2" max="10.00" granularity="0.03"
+                   distribution="random"/>
+        <attribute name="first_or_nobody" type="big_decimal" min="1.2" max="10.00" granularity="0.03"
+                   distribution="random"/>
+        <attribute name="second_or_nobody" type="big_decimal" min="1.2" max="10.00" granularity="0.03"
+                   distribution="random"/>
+        <attribute name="first_or_second" type="big_decimal" min="1.2" max="10.00" granularity="0.03"
+                   distribution="random"/>
+    </generate>
+
+-->
+<!--
+    <comment>Generating events</comment>
+        <generate type="events"  count="3"  consumer="db">
+            <reference name="coefficients_id" targetType="string" source="db" values="1"/>
+            <id name="id" type="int"  generator="idGen1"/>
+            <attribute name="event_type" type="string" values="'sport'"/>
+            <attribute name="kind_of_sport" type="string"  values="'football','basketball','hockey'"/>
+            <attribute name="description" type="string"  values="'LA Liga'"/>
+            <attribute name="first_competitor" type="string"  values="'Real Madrid'"/>
+            <attribute name="second_competitor" type="string"  values="'Barcelona'"/>
+            <attribute name="start_date" type="string" generator="datetime_gen"/>
+            <attribute name="first_score" type="int"  values="0 , 1 , 2 , 3"/>
+            <attribute name="second_score" type="int" values="0 , 1 , 2 , 3"/>
+            <attribute name="is_played" type="int" values=" 0"/>
+        </generate>
+-->
+
+
+
+<!--
+    <comment>Generating bets</comment>
+    <generate type="bets" consumer="db">
+        <id name="bet_id" type="int"  values="100"/>
+        <attribute name="amount_count" type="integer" min="1" max="100" granularity="1"
+                   distribution="random"/>
+        <attribute name="expected_win" type="integer"  min="1" max="100" granularity="1" distribution="random"/>
+        <attribute name="result" type="integer"  min="1" max="100" granularity="1"  distribution="random"/>
+        <attribute name="bet_type" type="string"  values="'First victory, Second victory'"/>
+        <attribute name="bet_date" type="string"  values="'2018-02-21'"/>
+        <attribute name="bet_coef" type="big_decimal"  min="1.2" max="10.00" granularity="0.03" distribution="random"/>
+        <attribute name="bet_currency" type="string" values="'BYN'"/>
+        <reference name="account_login"   source= "db" targetType="string"  generator="idGen8"/>
+        <reference name="event_id"   source= "db" targetType="integer"  generator="idGen7"/>
+    </generate>
+-->
+
+
+
+<!--GOOD
+    <comment>Generating invoices</comment>
+    <generate type="invoices" count="1"  consumer="db">
+        <id name="id" type="int" generator="idGen1"/>
+        <attribute name="inv_currency" type="string" values="'BYN'"/>
+        <attribute name="ballance" type="big_decimal"  min="1.2" max="10.00" granularity="0.03"
+                   distribution="random"/>
+
+    </generate>
+
+
+-->
+
+    <!--GOOD -->
+
+    <!--
+
+              <comment>Generating transactions</comment>
+              <generate type="transactions" count="1"  consumer="db">
+                  <id name="id" type="int"  generator="idGen3"/>
+                  <attribute name="date" type="date" generator="datetime_gen"/>
+                  <attribute name="type" type="string"  values="'visa','webmoney'"/>
+                  <attribute name="amount" type="big_decimal" min="1.2" max="10.00" granularity="0.03"
+                             distribution="random"/>
+                  <attribute name="tran_type" type="string"  values="'DEPOSIT'"/>
+
+              </generate>
+    -->
+
+
+<!--
+       <comment>Generating bets</comment>
+       <generate type="bets" consumer="db">
+       <id name="bet_id" type="int"  values="1000"/>
+       <attribute name="amount_count" type="integer" min="1" max="100" granularity="1"
+       distribution="random"/>
+       <attribute name="expected_win" type="integer"  min="1" max="100" granularity="1" distribution="random"/>
+       <attribute name="result" type="integer"  min="1" max="100" granularity="1"  distribution="random"/>
+       <attribute name="bet_type" type="string"  values="'First victory, Second victory'"/>
+       <attribute name="bet_date" type="string"  values="'2018-02-21'"/>
+       <attribute name="bet_coef" type="big_decimal"  min="1.2" max="10.00" granularity="0.03" distribution="random"/>
+       <attribute name="bet_currency" type="string" values="'BYN'"/>
+       <reference name="account_login"   source= "db" targetType="string" values="'1'"/>
+       <reference name="event_id"   source= "db" targetType="integer"  generator="idGen6"/>
+                           </generate>
+
+-->
+  </setup>

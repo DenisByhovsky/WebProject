@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+
+*{
+    margin: 0px auto;
+    padding: 0;
+}
+
+
+html{
+   
+
+}
+
+
+body{
+    height: 100%;
+    width: 100%;
+    background-image: url("/img/send1.jpg");
+    background-repeat: no-repeat;
+    background-color: #D3D3D3;
+}
+
+.otvet{
+    background: white;
+ 
+    border-radius: 10px;
+    padding: 20px;
+    opacity:0.8;
+    text-align: center;
+}
+.otvet:hover{
+
+ opacity:1;
+}
+
+
+a{
+    margin:0px auto;
+    text-align: center;
+    font-size: 1.4em;
+}
